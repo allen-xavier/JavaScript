@@ -44,7 +44,7 @@ function anonovo() {
 
 const regressiva2 = new Promise((resolve, reject) => {
     let nums = "";
-    for (let i = 10; i >0; i--) {
+    for (let i = 10; i > 0; i--) {
         nums += i + "\n";
     }
     resolve(nums);
@@ -78,34 +78,74 @@ function acima7() {
 
 let produtos = [
     {
-       produto: "tomate",
-       preco: "10.5" 
+        produto: "tomate",
+        preco: "10.5"
     },
     {
         produto: "feijao",
-        preco: "8.9" 
-     },
-     {
+        preco: "8.9"
+    },
+    {
         produto: "batata",
-        preco: "6.3" 
-     },
-     {
+        preco: "6.3"
+    },
+    {
         produto: "espinafre",
-        preco: "5.9" 
-     }
+        preco: "5.9"
+    }
 ]
 
-function somaPreco(){
-    let valortotal
-    produtos.forEach(function(valor) {
-        if (valor.preco > 0) {
-        valortotal = valortotal += valor.preco;
-        }
+function somaPreco() {
+    let valortotal = 0
+    produtos.forEach(function (produto) {
+            valortotal += +produto.preco;
     })
     console.log("Soma dos Produtos: " + valortotal);
 }
 
-/* somaPreco(); */
+let escola = [
+    {
+        aluno: "Fernando",
+        serie: "8",
+    },
+    {
+        aluno: "Patricia",
+        serie: "9",
+    },
+    {
+        aluno: "Joao",
+        serie: "8",
+    },
+    {
+        aluno: "Jaqueline",
+        serie: "8",
+    },
+    {
+        aluno: "Michele",
+        serie: "9",
+    },
+    {
+        aluno: "Bruno",
+        serie: "8",
+    },
+    
+]
+
+function alteraMateria() {
+    escola.forEach(function (materia) {
+            if (materia.serie == 8){
+                materia.materia = "História";
+            }
+            if (materia.serie == 9){
+                materia.materia = "Física";
+            }
+            console.log(materia);
+    })
+    
+}
+
+
+
 
 /* parImpar(7); */
 
@@ -120,3 +160,7 @@ function somaPreco(){
 /* asyncFunction(); */
 
 /* acima7() */
+
+/* somaPreco(); */
+
+/* alteraMateria() */
