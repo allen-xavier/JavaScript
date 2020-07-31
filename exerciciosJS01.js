@@ -136,7 +136,7 @@ function alteraMateria() {
             if (materia.serie == 8){
                 materia.materia = "História";
             }
-            if (materia.serie == 9){
+            else if (materia.serie == 9){
                 materia.materia = "Física";
             }
             console.log(materia);
